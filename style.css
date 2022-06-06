@@ -1,12 +1,20 @@
 html,body{
-
+    height: 100vh;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
 
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    background-color: #ffffff;
+    background-color: #ffffff; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
 }
 
 /*  --  Header   -- */
@@ -16,33 +24,29 @@ html,body{
     border: 1px solid #707070;
 
     width: 100%;
-    max-width: 1349px;
-
     margin: auto;
-    
 }
 
-.nav-container{
+.menus{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     padding: 20px;
 }
 
-.nav-div a{
+.menu-item a, .search-input{
     text-decoration: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0;
     color: #ffffff;
+    font-size: 2rem;
 }
 
-.menu{
+.menu-list{
     display: flex;
     align-items:center;
 }
-.menu a{
+
+.menu-list a{
     margin: 10px;
 }
 
@@ -50,41 +54,46 @@ html,body{
     display: flex;
     align-items: center;
 
-    border: 1px solid #707070;
+    width: 150px;
+}
+
+.search-input{
     background-color: #8B0000;
-    border-radius: 8px;
-    margin: 0;
-    padding: 0;
+    border: none;
+    outline: none;
+    border-radius: 0px 8px 8px 0px;
+    padding: 10px;
+    width: 100%;
+    max-width: 150px;
 }
 
-.search img{
-    height: 25px;
-    padding: 5px 10px 5px 5px;
-
-}
-.search a{
-    padding-right: 100px;
+.search-icon{
+    background-color: #8B0000;
+    padding: 3px 0px 4px 3px;
+    border-radius: 8px 0px 0px 8px; 
 }
 
-.g1{
-    padding-left: 105px;
+.search-icon{
+    padding-left: 8px;
 }
-
 
 /*--   Main    -- */
 /* flexbox */
+
+.main{
+    width: 100vw;
+}
 
 .title-hero{
 
     display: flex;
     justify-content: center;
 
-    font-size: 35px;
+    font-size: 3.5rem;
     text-transform: uppercase;
 
     margin-top: 45px;
-    margin-bottom: 60px;
-    
+    margin-bottom: 60px;   
 }
 
 /* grid 1 */
@@ -111,8 +120,7 @@ html,body{
     grid-row: 1/3;
     border: 1px solid #707070;
     border-radius: 4px;  
-    height: 620px;
-    
+    width: 100%;   
 }
 
 .grid1-item1 div{
@@ -125,33 +133,29 @@ html,body{
 
 .grid1-item1 h2{
     margin-bottom: 0;
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .grid1-item1 h2, p{
    margin-top: 2px;
 }
 
-
-
 .grid1-item2 img{
-    width: 520px;
+    width: 100%;
     margin-bottom: 0;
     padding-bottom: 0;
     padding-right: 0;
 }
 
 .grid1-item3 img{
-    width: 520px;
+    width: 100%;
     padding-right: 0;
 }
-
 
 /* grid2 */
 
 .grid2{
-    margin:0 100px 150px 100px ;
-    
+    margin:0 100px 150px 100px;
 }
 
 .card{
@@ -165,41 +169,41 @@ html,body{
 }
 
 .card img{
-    width: 525px;
+    width: 100%;
+    min-width: 250px;
    
 }
 
 .card .title-1{
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
     margin: 0;
 }
+
 .card .title-2{
-    font-size: 30px;
-    color:#C4170C;
-    
-
+    font-size: 3.0rem;
+    color:#C4170C; 
 }
-.card .title-3{
-    font-size: 22px;
-    font-weight: 400;
 
+.card .title-3{
+    font-size: 2.2rem;
+    font-weight: 400;
 }
 
 .card .title-4{
-    font-size: 22px;
+    font-size: 2.2rem;
     color: #746565;
 }
 
 
 /* button */
-.botao{
+.button-card{
     display: flex;
     align-items: center;
 }
 
 .button{
-    font-size: 20px;
+    font-size: 2rem;
     background-color: #C4170C;
     color: #ffffff;
     border: 1px solid #707070;
@@ -218,34 +222,33 @@ html,body{
     color: #ffffff;
 
     display: flex;
-    justify-content: space-between; 
-    align-items: flex-end;  
-    padding:  12px 40px 0px 40px ;
+    justify-content: space-between;
+    align-items: flex-end;
     
-    
-    
+    padding: 12px 40px 0px 40px;
 }
+
 .footer-info{
     display: flex;
     flex-direction: column;
     margin: 0px;
     padding: 0px;
 }
-.noticias{
+
+.news{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.noticias p{
+
+.news p{
     padding-top: 20px;
     margin-left: 20px;
-    font-size: 25px;
-
+    font-size: 2.5rem;
 }
 
-
 .footer-ul{
-    list-style: none;    
+    list-style: none;
 }
 
 .footer-ul li{
@@ -255,17 +258,172 @@ html,body{
 .footer-ul .link1{
     border-right: 1px solid white;
     padding-right: 5px;
-  
-
 }
+
 .footer-ul .link2{
     border-right: 1px solid white;
     padding-right: 5px;
-
 }
+
 .footer-ul .link3{
     border-right: 1px solid white;
     padding-right: 5px;
-
 }
+
+/* 
+        Responsive media querys
+ */
+
+@media screen and (max-width: 1100px){
+    .news{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1064px){
+    input::placeholder {
+        color: transparent;
+   }
+}
+
+@media screen and (max-width: 1050px){
+    .grid1{
+        grid-gap: 50px 50px;
+    }
+
+    .grid1-item1{
+        grid-row: 1/1;
+        grid-column: 1/3; 
+    }
+
+    .grid1-item1 div{
+        text-align: left;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+    }
+    
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 880px){
+    .title-hero{
+        font-size: 3rem
+    }
+
+    .grid-item1{
+        display: grid;
+        grid-template-rows:  1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .grid1-item2{
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+
+    .grid1-item3{
+        grid-column: 1/3;
+    }
+
+    .card-img{
+       grid-column: 1/3;
+    }
+
+    .card-text{
+        grid-column:1/3 ;
+    }  
+}
+@media screen and (max-width: 750px){
+    .title-hero{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .copyright{
+        display: none;
+    }
+
+    .footer-ul{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        line-height: 20px;
+        border: none;
+        text-align: center;
+    }
+
+    .footer-ul .link1{
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+        border-right: none;
+    }
+    
+    .footer-ul .link2{
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+        border-right: none;
+    }
+    
+    .footer-ul .link3{
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+        border-right: none;
+    } 
+}
+
+@media screen and (max-width: 500px){
+    .title-hero{
+        display: none;
+    }
+
+    .grid1{
+        margin: 5rem;
+    }
+
+    .grid1-item1 div{
+        text-align: left;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+    }
+
+    .grid2{
+        margin: 5rem;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .search{
+        width: 10%;
+    }
+    
+    .search-input{
+        display: none;
+    }
+
+    .search-icon{
+        padding: 5px;
+        border-radius: 8px; 
+    }
+}
+
+@media screen and (max-width: 360px){
+    .grid1{
+        margin: 1rem;
+    }
+
+    .grid2{
+        margin: 1rem;
+    }
+
+    .button-card{
+        margin: 2rem;
+    }
+}
+
+
 
